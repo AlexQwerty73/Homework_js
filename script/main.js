@@ -67,9 +67,8 @@ console.log(pow(number, power));
 const string5 = "Doby";
 number = 5;
 
-const StringRepeat = (num, str) => {
-    return num != 1? str + StringRepeat(num - 1, str): str;
-}
+const StringRepeat = (num, str) =>  num != 1 ? str + StringRepeat(num - 1, str) : str;
+
 console.log(StringRepeat(number, string5));
 
 // 6
@@ -78,6 +77,7 @@ let random_6 = (maxNum) => {
     return Math.random() * maxNum;
 }
 console.log(random_6(maxNumber));
+
 // 7
 let numArray = [3, 4, 73, 24, 8, 2, 80];
 
@@ -85,6 +85,7 @@ const getMaxNumber = (arr) => {
     return Math.max.apply(null, arr);
 }
 console.log(getMaxNumber(numArray));
+
 // 8
 const password_ = 'n8jgf7i';
 const password__ = 'iytibyi';
@@ -93,6 +94,7 @@ const password_check = (pas, pas_) => {
     return (pas == pas_ ? true : false);
 }
 console.log(password_check(password_, password__));
+
 // 9   
 const number9_1 = 5;
 const number9_2 = 25;
@@ -100,28 +102,24 @@ const absFunc = (n1, n2) => {
     return Math.abs(n1 + n2);
 }
 console.log(absFunc(number9_1, number9_2));
-// 10
 
+// 10
 let random_10 = () => {
     return Math.random() * 10;
 }
 console.log(random_10());
 
 // 11
-
 number = 3.8;
 
-const getFactorial = (num) => {
-    return (num != 1 ? num * getFactorial(Math.floor(num) - 1) : 1);
-}
+const getFactorial = (num) => num != 1 ? num * getFactorial(Math.floor(num) - 1) : 1;
+
 console.log(getFactorial(number));
 
-// 12
-
+// 12 ??
 number = 89;
 
 const sqrtFunc = (num) => {
     return 
 }
 console.log(sqrtFunc(number));
-// 12-?

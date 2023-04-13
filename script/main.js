@@ -17,18 +17,18 @@ console.log("3 -", reverseArray(arr3));
 
 // 4
 
-const arr4 = [1, 2, 3, 4, 5, 6];
+const arr4 = [2, 1, 13, 7, 4];
 const sumArray = (array) => {
     let sum = 0;
-    array.filter(array => array % 2 == 0);
-    array.forEach(number => sum += number);
+    const newArray = array.filter(array => array % 2 == 0);
+    newArray.forEach(number => sum += number);
     return sum;
 }
 console.log("4 -", sumArray(arr4));
 
 // 5
 
-let arr5 = [' String  ', ' STRing', 'sTRING ', '  sTrInG'];
+let arr5 = [' String  ', ' STRing', 'sTRING ', '  sTrInG      '];
 const stringFunc5 = (array) => array.map(element => element.trim());
 console.log("5 -", stringFunc5(arr5));
 

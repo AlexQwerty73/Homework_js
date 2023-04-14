@@ -135,10 +135,10 @@ for (let i = 8; i >= 0; i--) console.log(i != 0 ? `${i}` + (i % 2 == 0 ? strChar
 
 console.log('\n');
 
-// 9.3----------------------------
+// 9.3-------через функцію----------
 
 console.log('--3--');
-const ch = (ch1, ch2, c) => {
+const chessField = (ch1, ch2, c) => {
     if (c == 0) {
         console.log(abcd9);
         return null;
@@ -147,4 +147,4 @@ const ch = (ch1, ch2, c) => {
         ch(ch2, ch1, c - 1);
     }
 }
-ch(char9_1, char9_2, 8)
+chessField(char9_1, char9_2, 8)

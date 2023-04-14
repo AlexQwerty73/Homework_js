@@ -46,7 +46,7 @@ const longestWord = (str) => {
     // }
     // return longestWord + ' ' + longestWord.length;
 }
-console.log(longestWord(string5));
+console.log('5 -', longestWord(string5));
 
 // 6
 // 1 - 33
@@ -59,8 +59,92 @@ const wordFromNumbers = (num) => {
     return word.join('');
 }
 
-console.log(wordFromNumbers(numsArr6));
+console.log('6 -', wordFromNumbers(numsArr6));
 
 // 7
 
+const arr7 = [12, 'de', 3, 'ed', 6, 36, 12, 6, 'qw', 'ef', 'qw'];
 
+const newArr7 = (array) => {
+    let newArr = [];
+    for (let n of array) {
+        array.indexOf(n) == array.lastIndexOf(n) ? newArr.push(n) : null;
+    }
+    return newArr
+}
+
+console.log('7 -', newArr7(arr7));
+
+// 8
+
+const count8 = 10; //кількість елементів в масиві
+const num8_1 = 2;
+const num8_2 = 1;
+
+const newArr8 = (n1, n2, count) => {
+    let newArr = [n1, n2];
+    for (let n = 2; n < count; n++) { newArr.push(newArr[n - 2] + newArr[n - 1]) }
+    return newArr;
+}
+
+console.log('8 -', newArr8(num8_1, num8_2, count8));
+
+// 9
+
+// 9.1
+console.log('\n--1-- (найкращий варіант) ');
+
+console.log('8 # @ # @ # @ # @');
+console.log('7 @ # @ # @ # @ #');
+console.log('6 # @ # @ # @ # @');
+console.log('5 @ # @ # @ # @ #');
+console.log('4 # @ # @ # @ # @');
+console.log('3 @ # @ # @ # @ #');
+console.log('2 # @ # @ # @ # @');
+console.log('1 @ # @ # @ # @ #');
+console.log('  A B C D E F G H');
+
+console.log('\n');
+
+// 9.2------------------------
+console.log('--2.1--');
+
+// символи 
+const char9_1 = '#';
+const char9_2 = '@';
+
+//відступи між символами
+const space = '  ';
+
+//нижня строка
+const abcd9 = ` ${space}A${space}B${space}C${space}D${space}E${space}F${space}G${space}H`;
+
+//строки з символами
+const strChars1 = `${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}`;
+const strChars2 = `${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}`;
+
+for (let i = 8; i >= 0; i--) {
+    console.log(i != 0 ? `${i}` + (i % 2 == 0 ? strChars1 : strChars2) : abcd9);
+}
+
+console.log('\n');
+
+//-----теж саме але for в 1 строчку------
+console.log('--2.2--');
+for (let i = 8; i >= 0; i--) console.log(i != 0 ? `${i}` + (i % 2 == 0 ? strChars1 : strChars2) : abcd9);
+
+console.log('\n');
+
+// 9.3----------------------------
+
+console.log('--3--');
+const ch = (ch1, ch2, c) => {
+    if (c == 0) {
+        console.log(abcd9);
+        return null;
+    } else {
+        console.log(`${c}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}`);
+        ch(ch2, ch1, c - 1);
+    }
+}
+ch(char9_1, char9_2, 8)

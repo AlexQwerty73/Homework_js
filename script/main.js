@@ -114,14 +114,14 @@ const char9_1 = '#';
 const char9_2 = '@';
 
 //відступи між символами
-const space = '  ';
+const space = '   ';
 
 //нижня строка
 const abcd9 = ` ${space}A${space}B${space}C${space}D${space}E${space}F${space}G${space}H`;
 
 //строки з символами
-const strChars1 = `${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}`;
-const strChars2 = `${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}${space}${char9_2}${space}${char9_1}`;
+const strChars1 = `${space}${char9_1}${space}${char9_2}`.repeat(4);
+const strChars2 = `${space}${char9_2}${space}${char9_1}`.repeat(4);
 
 for (let i = 8; i >= 0; i--) {
     console.log(i != 0 ? `${i}` + (i % 2 == 0 ? strChars1 : strChars2) : abcd9);
@@ -143,7 +143,7 @@ const ch = (ch1, ch2, c) => {
         console.log(abcd9);
         return null;
     } else {
-        console.log(`${c}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}${space}${ch1}${space}${ch2}`);
+        console.log(`${c}` + `${space}${ch1}${space}${ch2}`.repeat(4));
         ch(ch2, ch1, c - 1);
     }
 }

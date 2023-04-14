@@ -144,7 +144,7 @@ const chessField = (ch1, ch2, c) => {
         return null;
     } else {
         console.log(`${c}` + `${space}${ch1}${space}${ch2}`.repeat(4));
-        ch(ch2, ch1, c - 1);
+        chessField(ch2, ch1, c - 1);
     }
 }
 chessField(char9_1, char9_2, 8)

@@ -91,6 +91,6 @@ const postOffice = {
         { from: 'address', to: 'address' },
     ],
 }
-const isOpen = (workTime, time) =>  workTime.split('-')[0] <= time && time <= workTime.split('-')[1] ? true : false;
+const isOpen = (workTime, time) => workTime.split('-')[0] <= time && time < workTime.split('-')[1] ? true : false;
 
-console.log(isOpen(postOffice.workTime, 7));
+console.log(isOpen(postOffice.workTime, 21));

@@ -1,0 +1,33 @@
+.btn {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font: 12pt 'Trebuchet MS';
+    transition: 0.3s;
+}
+
+.red {
+    background: red;
+}
+.lightcoral {
+    background: lightcoral;
+}
+
+.green {
+    background: green;
+}
+.lightgreen {
+    background: lightgreen;
+}
+
+.lightcyan {
+    background: lightcyan;
+}
+.grey{
+    background: gray;
+}
+
+button:hover{
+    transform: scale(0.9);
+}

@@ -1,0 +1,102 @@
+body {
+    text-align: center;
+    margin: 10px 5%;
+    font: 20px 'Trebuchet MS';
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.arrow {
+    width: 70px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.category {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.animal-logo {
+    width: 100px;
+    margin: 10px 30px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.animal-logo:hover {
+    transform: scale(1.1);
+}
+
+main {
+    text-align: center;
+}
+
+#gallery {
+    border: 1px solid silver;
+    padding: 10px;
+    transition: transform .3s;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    min-height: 550px;
+}
+
+#gallery img {
+    transition: transform .5s;
+}
+
+.mini-photo {
+    max-width: 40%;
+    transition: transform .4s;
+}
+
+.mini-photo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#bigPhoto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(147, 147, 147, 0.379);
+    z-index: 1000;
+
+    overflow: hidden;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bigPhoto img {
+    width: 60vw;
+}
+
+#bigPhoto .header {
+    width: 100%;
+}
+
+.cross {
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+
+    position: fixed;
+    top: 40px;
+    left: 40px;
+}
